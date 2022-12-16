@@ -25,7 +25,9 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
     height: 80vh;
-    width: 35vw;
+    min-width: 1vw;
+
+    padding: 2.1875rem 1.875rem;
 
     background-color: #FCFCFC;
     border-radius: 0.9375rem;

@@ -73,6 +73,8 @@ export const InputButton = styled.button`
     font-weight: 700;
     font-size: 30px;
 
+    padding: 10px;
+
     display: flex;
     justify-content: center;
     align-items: center;

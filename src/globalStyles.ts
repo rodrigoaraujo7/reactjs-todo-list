@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         outline: none;
 
-        font-family: 'Open Sans', sans-serif; 
+        font-family: 'Nunito', sans-serif; 
     }
 
     body {

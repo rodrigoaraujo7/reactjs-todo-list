@@ -1,7 +1,21 @@
-import { BoldTitle, Title } from "./style";
+import { 
+    BoldTitle, 
+    Title, Container, 
+    InputContainer, 
+    InputText, 
+    InputButton 
+} from "./style";
 
 const Header = () => {
-    return <Title>what will you do <BoldTitle>today?</BoldTitle></Title>
+    return (
+        <Container>
+            <Title>what will you do <BoldTitle>today?</BoldTitle></Title>
+            <InputContainer>
+                <InputText type="text" placeholder="place here!" />
+                <InputButton>V</InputButton>
+            </InputContainer>
+        </Container>
+    )
 }
 
 export default Header;

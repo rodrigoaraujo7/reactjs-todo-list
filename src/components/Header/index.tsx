@@ -39,7 +39,8 @@ const Header = () => {
             </InputContainer>
 
         </Container>
-        <Container>
+
+        <Container style={{ height: '70%' }}>
             {todoItem.map(item => <ItemList name={item} />)}
         </Container>
         </>

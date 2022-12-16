@@ -1,11 +1,12 @@
-import { GlobalStyle } from './globalStyles'
+import Header from './components/Header'
+import { Container, GlobalStyle } from './globalStyles'
 
 const App = () => {
   return (
-    <div>
+    <Container>
       <GlobalStyle />
-      <h1>Hello World!</h1>
-    </div>
+      <Header />
+    </Container>
   )
 }
 

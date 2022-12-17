@@ -16,15 +16,13 @@ import { useState } from "react";
 
 const Header = () => {
     // read input-text value!
-    const [itemName, setItemName] = useState<string>('');
+    const [itemName, setItemName] = useState('');
     const getItemName = (event: any) => setItemName(event.target.value);
 
     // create new todo-item
     const [todoItem, setTodoItem] = useState<string[]>(['']);
     const createNewTodoItem = () => {
-        setTodoItem([... todoItem, itemName])
-
-        console.log(todoItem)
+        setTodoItem([itemName, ...todoItem])
     }
 
     return (

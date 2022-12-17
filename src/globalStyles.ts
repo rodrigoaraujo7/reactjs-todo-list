@@ -18,13 +18,14 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
 
         min-height: 100vh;
+        padding-top: 50px;
 
         background-color: #E3E3E3;
     }
 `
 
 export const Container = styled.div`
-    height: 80vh;
+    min-height: 30vh;
     min-width: 1vw;
 
     padding: 2.1875rem 1.875rem;

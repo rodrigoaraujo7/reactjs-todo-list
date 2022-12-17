@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+// Header
 export const HeaderContainer = styled.div`
     display: flex;
     justify-content: center;
@@ -27,6 +28,7 @@ export const BoldTitle = styled.h1`
     margin-left: 0.5rem;
 `
 
+// Input header
 export const InputContainer = styled.div`
     width: 70%;
     margin-top: 20px;
@@ -45,6 +47,7 @@ export const InputText = styled.input`
     background-color: none;
 
     padding: 5px 15px 5px;
+    height: 75px;
 
     font-size: 20px;
     font-weight: 400;
@@ -73,6 +76,7 @@ export const InputButton = styled.button`
     font-weight: 700;
     font-size: 30px;
 
+    height: 75px;
     padding: 10px;
 
     display: flex;
@@ -82,8 +86,15 @@ export const InputButton = styled.button`
     cursor: pointer;
 `
 
+// Todo item
+export const TodoItemGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+`
+
 export const TodoItemContainer = styled.div`
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     width: 100%;
@@ -96,6 +107,11 @@ export const TodoItemContainer = styled.div`
     box-shadow: 0 2.5px 10px #3C3C3C35;
 
     color: #808080;
+`
+
+export const TodoItemContent = styled.div`
+    display: flex;
+    align-items: center;
 `
 
 export const TodoItemTitle = styled.h2`

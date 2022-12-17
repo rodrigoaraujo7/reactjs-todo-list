@@ -8,8 +8,10 @@ import {
   InputContainer, 
   InputText, 
   InputButton,
+  TodoItemGrid,
   TodoItemContainer,
-  TodoItemTitle
+  TodoItemTitle,
+  TodoItemContent
 } from "./style";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // fontAwesome
@@ -54,17 +56,20 @@ const App = () => {
         </HeaderContainer>
 
         {/* Todo List */}
-        <HeaderContainer style={{ height: '70%' }}>
+        <TodoItemGrid style={{ height: '70%' }}>
             {todoItem.map(item => (
               <TodoItemContainer>
-                <FontAwesomeIcon icon={faSquareCheck as IconProp} onClick={handleCheckItem} />
-                <TodoItemTitle style={{
-                    textDecoration: isChecked ? 'line-through' : 'none',
-                    color: isChecked ? '#B0B0B0' : '#808080'
-                }}>{item}</TodoItemTitle>
+                <TodoItemContent>
+                  <FontAwesomeIcon icon={faSquareCheck as IconProp} onClick={handleCheckItem} />
+                  <TodoItemTitle style={{
+                      textDecoration: isChecked ? 'line-through' : 'none',
+                      color: isChecked ? '#B0B0B0' : '#808080'
+                  }}>{item}</TodoItemTitle>
+                </TodoItemContent>
+                <FontAwesomeIcon icon={faTrashCan as IconProp} />
               </TodoItemContainer> 
             ))}
-        </HeaderContainer>
+        </TodoItemGrid>
     </Container>
   )
 }

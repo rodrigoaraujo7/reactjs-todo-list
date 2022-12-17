@@ -16,11 +16,11 @@ import { useState } from "react";
 
 const Header = () => {
     // read input-text value!
-    const [itemName, setItemName] = useState('');
+    const [itemName, setItemName] = useState();
     const getItemName = (event: any) => setItemName(event.target.value);
 
     // create new todo-item
-    const [todoItem, setTodoItem] = useState<string[]>(['']);
+    const [todoItem, setTodoItem] = useState<any[]>([]);
     const createNewTodoItem = () => {
         setTodoItem([itemName, ...todoItem])
     }
@@ -35,7 +35,6 @@ const Header = () => {
                     <FontAwesomeIcon icon={faCheck as IconProp} />
                 </InputButton>
             </InputContainer>
-
         </Container>
 
         <Container style={{ height: '70%' }}>

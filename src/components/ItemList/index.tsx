@@ -13,24 +13,17 @@ type ItemListProps = {
 export const ItemList = (props: ItemListProps) => {
     const [isChecked, setIsChecked] = useState(false)
 
-    const handleClick = () => {
+    const handleCheckItem = () => {
         setIsChecked(current => !current)
     }
 
     return (
         <Container>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-            }}>
-                <FontAwesomeIcon icon={faSquareCheck as IconProp} onClick={handleClick} />
-                <Title style={{
-                    textDecoration: isChecked ? 'line-through' : 'none',
-                    color: isChecked ? '#B0B0B0' : '#808080'
-                }}>{props.name}</Title>
-            </div>
-            <FontAwesomeIcon icon={faTrashCan as IconProp} />
+            <FontAwesomeIcon icon={faSquareCheck as IconProp} onClick={handleCheckItem} />
+            <Title style={{
+                textDecoration: isChecked ? 'line-through' : 'none',
+                color: isChecked ? '#B0B0B0' : '#808080'
+            }}>{props.name}</Title>
         </Container>  
     )
 }

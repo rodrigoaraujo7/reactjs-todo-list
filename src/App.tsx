@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Container, GlobalStyle } from './globalStyles';
 import { 
@@ -7,11 +7,7 @@ import {
   HeaderContainer, 
   InputContainer, 
   InputText, 
-  InputButton,
-  TodoItemGrid,
-  TodoItemContainer,
-  TodoItemTitle,
-  TodoItemContent
+  InputButton
 } from "./style";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // fontAwesome
@@ -22,6 +18,8 @@ import {
   faTrashCan 
 } from '@fortawesome/free-solid-svg-icons'; // fontAwesome Icons
 
+import { ItemList } from './components/ItemList';
+
 const App = () => {
   // read input-text value!
   const [itemName, setItemName] = useState();
@@ -31,13 +29,6 @@ const App = () => {
   const [todoItem, setTodoItem] = useState<any[]>([]);
   const createNewTodoItem = () => {
       setTodoItem([itemName, ...todoItem])
-  }
-
-  // check item
-  const [isChecked, setIsChecked] = useState(false)
-
-  const handleCheckItem = () => {
-      setIsChecked(current => !current)
   }
 
   return (
@@ -56,20 +47,7 @@ const App = () => {
         </HeaderContainer>
 
         {/* Todo List */}
-        <TodoItemGrid style={{ height: '70%' }}>
-            {todoItem.map(item => (
-              <TodoItemContainer>
-                <TodoItemContent>
-                  <FontAwesomeIcon icon={faSquareCheck as IconProp} onClick={handleCheckItem} />
-                  <TodoItemTitle style={{
-                      textDecoration: isChecked ? 'line-through' : 'none',
-                      color: isChecked ? '#B0B0B0' : '#808080'
-                  }}>{item}</TodoItemTitle>
-                </TodoItemContent>
-                <FontAwesomeIcon icon={faTrashCan as IconProp} />
-              </TodoItemContainer> 
-            ))}
-        </TodoItemGrid>
+        {todoItem.map(item => <ItemList name={item} />)}
     </Container>
   )
 }

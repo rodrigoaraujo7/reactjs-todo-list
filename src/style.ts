@@ -31,7 +31,7 @@ export const BoldTitle = styled.h1`
 // Input header
 export const InputContainer = styled.div`
     width: 70%;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 
     height: 6.25rem;
 
@@ -42,14 +42,14 @@ export const InputContainer = styled.div`
 export const InputText = styled.input`
     flex: 8;
 
-    border-radius: 10px 0 0 10px;
+    border-radius: 0.625rem 0 0 0.625rem;
     border: 2px solid #E3E3E3;
     background-color: none;
 
-    padding: 5px 15px 5px;
-    height: 75px;
+    padding: 0.3125rem 0.9375rem 0.3125rem;
+    height: 4.6875rem;
 
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     color: #B9B9B9;
 
@@ -68,16 +68,16 @@ export const InputText = styled.input`
 export const InputButton = styled.button`
     flex: 2;
 
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 0.625rem 0.625rem 0;
     border: none;
     background-color: #305DFE;
 
     color: #FCFCFC;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 1.875rem;
 
-    height: 75px;
-    padding: 10px;
+    height: 4.6875rem;
+    padding: 0.625rem;
 
     display: flex;
     justify-content: center;
@@ -98,10 +98,10 @@ export const TodoItemContainer = styled.div`
     align-items: center;
 
     width: 100%;
-    height: 85px;
+    height: 5.3125rem;
 
-    padding: 0 15px 0;
-    margin-top: 15px;
+    padding: 0 0.9375rem 0;
+    margin-top: 0.9375rem;
 
     background-color: #F1F1F1;
     box-shadow: 0 2.5px 10px #3C3C3C35;
@@ -115,8 +115,13 @@ export const TodoItemContent = styled.div`
 `
 
 export const TodoItemTitle = styled.h2`
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
 
-    margin-left: 10px;
+    margin-left: 0.625rem;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 14.6875rem;
 `
